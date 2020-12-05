@@ -14,23 +14,24 @@ print()
 therandomnumber = random.randint(0, 10)
 
 # Take the Input of the user
-name = input("What is your name? ")
+yourname = input("What is your name?: ")
 guess = -1
+numberofguesses = 0
 
 # Check input to see if they matched it successfully
 
 while guess != therandomnumber:
     guess_text = input("Guesss a number: ")
     guess = int(guess_text)
-
+    numberofguesses = numberofguesses + 1
     if guess < therandomnumber:
-        print("Guess was too low")
+        print("I'm sorry, {}, your guess was {} and it is too low. You have guessed {} times " .format( yourname, guess_text, numberofguesses))
     elif guess > therandomnumber:
-        print("Guess was too high")
+        print("I'm sorry, {}, your guess was {} and it is too high. You have guessed {} times "  .format( yourname, guess_text, numberofguesses))
     else:
-        print("You got it right")
+        print("You got it right!!!")
 
-print("Game over")
+print("Game over.")
 # if the guess is too low?
 # if the guess is too high?
 # if they guess correctly?
